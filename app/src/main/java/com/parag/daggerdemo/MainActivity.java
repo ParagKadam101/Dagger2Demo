@@ -19,13 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ((MyApplication)getApplication()).getStorageComponent().inject(this);
-        if(mSharedPreferences == null)
+        if(mSharedPreferences != null)
         {
-            Log.d("xxxx","null");
-        }
-        else
-        {
-            Log.d("xxxx","not null");
+            Log.d("xxx","Successfully injected sharedpreference object");
         }
     }
 }
